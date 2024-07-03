@@ -1,0 +1,82 @@
+version: 2
+
+sources:
+  - name: real_estate
+    schema: real_estate_transactions
+    tables:
+     - name: property_transactions_informations
+       identifier: real_estate_property_transactions
+       description: This dataset contains real estate property transaction details including dates, locations, prices, characteristics, and tax rates. It provides insights into property market trends, facilitating market analysis, predictive modeling, and informed decision-making in real estate investments.
+       columns:
+         - name: Date
+           description: The date when the property transaction occurred.
+         - name: Year
+           description: The year of the property transaction.
+         - name: Locality
+           description: The locality or area where the property is located.
+         - name: Estimated Value
+           description: The estimated value of the property.
+         - name: Sale Price
+           description: The actual sale price of the property.
+         - name: Property
+           description: The type of property (e.g., Single Family).
+         - name: Residential
+           description: Indicates whether the property is residential or not.
+         - name: Num_rooms
+           description: The number of rooms in the property.
+         - name: Num_bathrooms
+           description: The number of bathrooms in the property.
+         - name: Carpet Area
+           description: The carpet area of the property.
+         - name: Property Tax Rate
+           description: The property tax rate applicable to the property.
+         - name: Face
+           description: The facing direction of the property (e.g., North, South, East).
+     - name: rental_transactions_informations
+       identifier: usa_housings_listings
+       description: Craigslist is the world's largest collection of privately rental housing options. This dataset aggregates housing listings across various regions in the United States, enabling experimental analysis on a national scale rather than isolated urban markets.
+       columns:
+         - name: listing_id
+           description: Unique identifier for the listing.
+         - name: url
+           description: Listing URL on Craigslist.
+         - name: region
+           description: Craigslist region where the listing is located.
+         - name: region_url
+           description: URL of the Craigslist region.
+         - name: price
+           description: Rent per month for the housing listing.
+         - name: type
+           description: Type of housing (e.g., apartment, house).
+         - name: sqfeet
+           description: Total square footage of the property.
+         - name: beds
+           description: Number of bedrooms in the property.
+         - name: baths
+           description: Number of bathrooms in the property.
+         - name: cats_allowed
+           description: Boolean indicating if cats are allowed (1 = yes, 0 = no).
+         - name: dogs_allowed
+           description: Boolean indicating if dogs are allowed (1 = yes, 0 = no).
+         - name: smoking_allowed
+           description: Boolean indicating if smoking is allowed (1 = yes, 0 = no).
+         - name: wheelchair_access
+           description: Boolean indicating if wheelchair access is available (1 = yes, 0 = no).
+         - name: electric_vehicle_charge
+           description: Boolean indicating if electric vehicle charging is available (1 = yes, 0 = no).
+         - name: comes_furnished
+           description: Boolean indicating if the property comes furnished (1 = yes, 0 = no).
+         - name: laundry_options
+           description: Options available for laundry facilities in the property.
+         - name: parking_options
+           description: Options available for parking facilities associated with the property.
+         - name: image_url
+           description: URL of the image associated with the listing.
+         - name: description
+           description: Detailed description of the property listing.
+         - name: lat
+           description: Latitude coordinate of the property location.
+         - name: long
+           description: Longitude coordinate of the property location.
+         - name: state
+           description: State where the property is located.
