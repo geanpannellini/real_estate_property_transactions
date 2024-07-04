@@ -1,6 +1,8 @@
 {{
     config(
-        alias='rental_transactions_informations'
+        alias='rental_transactions_informations',
+        materialized='incremental',
+        unique_key='listing_id'
     )
 }}
 
