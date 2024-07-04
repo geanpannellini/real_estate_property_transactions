@@ -126,6 +126,12 @@ Speak about Data Hub/Data Catalog
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/e049cf94-ce0d-4535-a681-3fe5253e6fee">
 
+# About the Data Cloud
+
+I've used the Big Query, it`s an efficient storage to complement our open source tools.
+
+<img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/86ccf997-2cfc-45b5-b29d-1b63d0314094">
+
 # About the Model architecture
 
 All tables are possibly found [here](models).
