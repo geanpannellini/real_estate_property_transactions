@@ -114,7 +114,7 @@ __Documentation:__ Excellent, detailed documentation allows for local setup in m
 
 __Ease of Use:__ High ease of use due to extensive online resources and community support.
 
-__Scalability:__ No significant differences found compared to other tools.
+__Scalability:__ No significant differences were found compared to other tools.
 
 __Experience with Use/Implementation:__ We need understand the team and the previous experience
 
@@ -126,14 +126,11 @@ __Code Organization:__ Excels in code organization, requiring fewer library impo
 
 ![image](https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/75309c05-f2de-4006-b549-70b1792443ad)
 
-Speak about Data Hub/Data Catalog
+The main important criteria considered here are __the cost and the environment__. If the company has Databricks, the company can use the data catalog included inside of the plan. If the company is using all open source tools, it can consider the Spotify data hub catalog. __All tools are similar.__
 
 # About the Project - Creating & Populating SQL Database with Two Provided Datasets
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/e049cf94-ce0d-4535-a681-3fe5253e6fee">
-
-My unique criteria to catalog is to use some open source tool. Because of that, my personal choice is Data Hub from Spotify. 
-But if the company has Databricks, they can use the data catalog that is included inside of the plan. 
 
 # About the Data Cloud
 
