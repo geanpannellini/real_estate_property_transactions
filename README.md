@@ -1,17 +1,19 @@
 
 # About the Big picture (And big dream) of the Data universe on Clever! 
 
-Draw the slide with the data pipeline overview
+<img width="1000" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/76f57611-e67a-49a8-9473-28ef7540301c">
 
 Before start,
+
 My highligh and opinion:
+
 For all decisions about wich tool we need use, we need understand the moment of the company. My first mindset is open source tools like:
 
-1. Using Data Contracts project from spotify (To make a contract of data between the cloud storage and raw layer)
+1. Using Data Contracts project from spotify open source tools (To make a contract of data between the cloud storage and raw layer)
 
-2. Data Hub from Linkedin (to catalog our data)
+2. Data Hub from Linkedin open source tools (to catalog our data)
 
-3. dbt as the open source transformation tool,
+3. dbt as the open source transformation tool
 
 etc.
 
@@ -120,15 +122,20 @@ __Code Organization:__ Excels in code organization, requiring fewer library impo
 
 # About the Data Catalog
 
+![image](https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/75309c05-f2de-4006-b549-70b1792443ad)
+
 Speak about Data Hub/Data Catalog
 
 # About the Project - Creating & Populating SQL Database with Two Provided Datasets
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/e049cf94-ce0d-4535-a681-3fe5253e6fee">
 
+My unique criteria to catalog is to use some open source tool. Because of that, my personal choice is Data Hub from Spotify. 
+But if the company has Databricks, they can use the data catalog that is included inside of the plan. 
+
 # About the Data Cloud
 
-I've used the Big Query, it`s an efficient storage to complement our open source tools.
+I've used the Big Query, it is an efficient storage to complement our open source tools.
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/86ccf997-2cfc-45b5-b29d-1b63d0314094">
 
