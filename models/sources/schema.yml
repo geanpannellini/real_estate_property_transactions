@@ -4,6 +4,11 @@ models:
   - name: property_transactions_informations
     description: Incremental table containing real estate property transaction details.
     columns:
+      - name: primary_id
+        description: Primary identifier combining date, locality, sale price, and property.
+        tests:
+          - unique
+          - not_null
       - name: date
         description: The date when the property transaction occurred.
       - name: year
@@ -28,8 +33,6 @@ models:
         description: The property tax rate applicable to the property.
       - name: face
         description: The facing direction of the property (e.g., North, South, East).
-      - name: primary_id
-        description: Primary identifier combining date, locality, sale price, and property.
 
     meta:
       alias: property_transactions_informations
