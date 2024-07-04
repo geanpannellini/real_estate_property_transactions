@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: rental_all_listings
+    description: Model combining rental listings with property characteristics and locality.
+    columns:
+      - name: listing_id
+        description: Unique identifier for the rental listing.
+      - name: housing_type
+        description: Type of housing (e.g., apartment, house).
+      - name: locality
+        description: Locality or area where the property is located.
+      - name: price
+        description: Rent per month for the housing listing.
+      - name: sqfeet
+        description: Total square footage of the property.
+
+  - name: sales_all_contracts
+    description: Model combining property transaction details with property information.
+    columns:
+      - name: transaction_key
+        description: Unique identifier for the property transaction.
+      - name: date
+        description: The date when the property transaction occurred.
+      - name: property
+        description: Type of property involved in the transaction.
+      - name: sale_price
+        description: The actual sale price of the property.
