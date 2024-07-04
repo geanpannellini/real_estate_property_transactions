@@ -130,7 +130,7 @@ The main important criteria considered here are __the cost and the environment__
 
 # About the Project - Creating & Populating SQL Database with Two Provided Datasets
 
-<img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/e049cf94-ce0d-4535-a681-3fe5253e6fee">
+<img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/64b6f72d-9d8c-4691-8b0b-c562ad9ba260">
 
 # About the Data Cloud
 
@@ -235,7 +235,7 @@ The gold is the business layer and can be used for business queries and platform
 
 > :point_right: [Macros] I created a simple "dates macro" to help with monthly, quarterly, semiannually. To check a case, [click here.](macros/dates.sql) To check an application, [click here.](analyses/total_transactions_by_quarter.sql)
 
-> :point_right: [Data Validation] In all tables, tests are implemented on the primary key and important columns. To check a case, [click here.](models/sources/sources.yml)
+> :point_right: [Data Validation] In all tables, tests are implemented on the primary key and important columns. To check a case, [click here.](models/sources/schema.yml)
 
 > :point_right: [Documentation] In all tables, the implemented tables and columns are described, and the schema can be integrated with the Data Catalog. To check a case, [click here.](models/silver/schema.yml)
 
