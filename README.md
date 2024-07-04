@@ -9,7 +9,7 @@ My highligh and opinion:
 
 For all decisions about wich tool we need use, we need understand the moment of the company. My first mindset is open source tools like:
 
-1. Using Data Contracts project from spotify open source tools (To make a contract of data between the cloud storage and raw layer)
+1. Using Data Contracts project from spotify open source tools (To make a contract of data between the raw layer and bronze layer)
 
 2. Data Hub from Linkedin open source tools (to catalog our data)
 
