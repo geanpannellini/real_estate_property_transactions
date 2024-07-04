@@ -1,11 +1,40 @@
 
-# About the Big picture of Data Pipeline
+# About the Big picture (And big dream) of the Data universe on Clever! 
 
 Draw the slide with the data pipeline overview
 
 # About the extractions 
 
-Speak about the tools: rivery, stitch
+Stitch and Rivery are two data integration and extraction platforms designed to streamline and automate the flow of data between different sources and destinations.
+They are similar, but we can analyze the __cost, rows per month allowed to be collected, and the number of connectors__
+
+<details>
+  
+<summary>Click to expand and look at the comparison </summary>
+
+`Stitch:`
+
+__Cost:__ Premium plan billed annually at $2,500. - Offers advanced security features, compliance, and extensive support options.
+
+__Rows per Month:__ Allowed to be Collected - Supports up to 1 billion rows per month.
+
+__Quantity of Connectors (Native Connectors):__  140+ native connectors.
+
+__Situation:__ Ideal for organizations needing best-in-class security and compliance, suitable for enterprises with high data volumes.
+
+`Rivery:`
+
+__Cost:__ Charges based on RPU (Rivery Processing Unit) credits at $1.20 per RPU credit. - Offers scalability with options for advanced features and integration capabilities.
+
+__Rows per Month:__ Allowed to be Collected
+
+__Pricing based on data transferred:__ charges vary based on the amount of data processed, not strictly by row count.
+
+__Quantity of Connectors (Native Connectors):__ 200+ native connectors.
+
+__Situation:__ Targeted at advanced data teams with engineering capabilities, offering scalability, flexibility in data processing, and advanced integration options via API and CLI access.
+
+</details>
 
 # About the Orchestration
 
@@ -77,11 +106,11 @@ __Code Organization:__ Excels in code organization, requiring fewer library impo
 
 Speak about Data Hub/Data Catalog
 
-# Project - Creating & Populating SQL Database with Two Provided Datasets
+# About the Project - Creating & Populating SQL Database with Two Provided Datasets
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/e049cf94-ce0d-4535-a681-3fe5253e6fee">
 
-# About the Models architecture
+# About the Model architecture
 
 All tables are possibly found [here](models).
 
@@ -170,7 +199,7 @@ The Rental schema is above:
 
 The gold is the business layer and can be used for business queries and platform data views(Lightdash, Looker, Metabase).
 
-## Lineage graphs - Rental Example
+## Lineage graphs - Using only property as an example
 
 <img width="800" alt="image" src="https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/26840c85-11a8-40f8-abea-0060bf5279c9">
 
@@ -193,7 +222,6 @@ The primary model, [All Listings for Rental](models/gold/rental_all_listings.sql
 In some situations is possible create a [Analyses](analyses/price_average.sql) area to create the top of questions.
 
  `Example: What is the average rent for each type of housing in different regions?` 
-
 
 ## Additional information: Stack
 
