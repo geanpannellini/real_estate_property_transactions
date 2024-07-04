@@ -11,6 +11,10 @@ Speak about the tools: rivery, stitch
 
 Speak about Luigi/Airflow
 
+### CI/CD
+
+In another option, for dbt-core, we can use [GitHub Actions.](.github/workflows) With this way, it is possible make the orchestration in github and using dbt-core (open source and free). In the link, there is some examples how we can create the CI/CD pipeline.
+
 # About the Data Catalog
 
 Speak about Data Hub/Data Catalog
@@ -21,7 +25,7 @@ Speak about Data Hub/Data Catalog
 
 # About the Data Pipeline - Model architecture
 
-All tables are possibly found [here](models). 
+All tables are possibly found [here](models). We are using dbt, because is XXXX 
 
 I am using the [Medallion Architecture](https://www.databricks.com/glossary/medallion-architecture), and I split the layers using `bronze`, `silver`, and `gold`. 
 
@@ -54,10 +58,6 @@ The Property schema is above:
 ## Gold
 
 The gold is the business layer and can be used for business queries and platform data views(Lightdash, Looker, Metabase).
-
-## CI/CD
-
-Speak about github actions
 
 ## Lineage graphs
 
