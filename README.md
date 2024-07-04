@@ -5,15 +5,17 @@
 
 Before start,
 
-My highligh and opinion:
+My highlights and opinion:
 
-For all decisions about wich tool we need use, we need understand the moment of the company. My first mindset is open source tools like:
+For all decisions about which tool we need to use, we need to understand the moment of the company and the market(in Real Estate there is a lot of data and need to be introduced fast, because of that the mindset can spend money with tools that help manage the pipeline - Databricks using spark?) 
 
-1. Using Data Contracts project from spotify open source tools (To make a contract of data between the raw layer and bronze layer)
+But always, my first mindset is open source tools like:
 
-2. Data Hub from Linkedin open source tools (to catalog our data)
+1. Using Data Contracts project from Spotify open source tools (To make a contract of data between the raw layer and bronze layer)
 
-3. dbt as the open source transformation tool
+2. Data Hub from LinkedIn open source tools (to catalog our data)
+
+3. dbt as the open-source transformation tool
 
 etc.
 
