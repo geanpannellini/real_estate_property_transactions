@@ -3,7 +3,23 @@
 
 Draw the slide with the data pipeline overview
 
+Before start,
+My highligh and opinion:
+For all decisions about wich tool we need use, we need understand the moment of the company. My first mindset is open source tools like:
+
+1. Using Data Contracts project from spotify (To make a contract of data between the cloud storage and raw layer)
+
+2. Data Hub from Linkedin (to catalog our data)
+
+3. dbt as the open source transformation tool,
+
+etc.
+
+As an example, no make sense use a Databricks that is a expansive tool, if the company is in a Seed/Series A funding. It`s like drive a rocket in the moment that we need drive a bike and prepare the company for the next step! 
+
 # About the extractions 
+
+![image](https://github.com/geanpannellini/real_estate_property_transactions/assets/70926945/2610258a-651d-4a9c-98f8-7343197647d7)
 
 Stitch and Rivery are two data integration and extraction platforms designed to streamline and automate the flow of data between different sources and destinations.
 They are similar, but we can analyze the __cost, rows per month allowed to be collected, and the number of connectors__
