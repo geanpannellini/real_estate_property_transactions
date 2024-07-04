@@ -1,0 +1,59 @@
+name: Run dbt test on pull request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  delay_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delay job start
+        run: sleep 60  # Delay for 60 seconds (1 minute)
+
+  dbt:
+    needs: delay_job  # Ensure delay_job completes before starting dbt job
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for all branches
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dbt and dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install dbt-core dbt-bigquery
+
+      - name: Configure dbt profiles
+        run: |
+          mkdir -p ~/.dbt
+          echo "$DBT_PROFILES" > ~/.dbt/profiles.yml
+        env:
+          DBT_PROFILES: ${{ secrets.DBT_PROFILES }}
+
+      - name: Get list of changed models and tests
+        id: changes
+        run: |
+          git diff --name-only origin/main...HEAD > changed_files.txt
+          cat changed_files.txt
+
+      - name: Run dbt tests
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_HTTP_PATH: ${{ secrets.DATABRICKS_HTTP_PATH }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+        run: |
+          dbt test --models $(grep -E 'models/.*\.sql' changed_files.txt | sed 's/^/+/' | tr '\n' ' ') --profiles-dir ~/.dbt --target dev
