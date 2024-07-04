@@ -37,7 +37,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   real_estate_property_transactions:
-    # Config indicated by + and applies to all files under models/example/
+    analyse:
+      materialized: view
+      +schema: ana
     sources:
         schema: staging
         +materialized: table

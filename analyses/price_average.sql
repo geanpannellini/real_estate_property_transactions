@@ -1,3 +1,4 @@
+-- Calculate the price average
 SELECT
     locality,
     housing_type,
