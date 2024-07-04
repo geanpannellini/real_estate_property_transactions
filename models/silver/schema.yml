@@ -1,0 +1,116 @@
+version: 2
+
+models:
+  - name: dim_locality
+    description: This dataset consolidates locality information from property and rental transactions.
+    columns:
+      - name: locality
+        description: The locality name, standardized to uppercase.
+      - name: locality_key
+        description: A unique identifier for each locality.
+
+  - name: dim_property
+    description: This dataset includes distinct properties with unique identifiers.
+    columns:
+      - name: property
+        description: The property name.
+      - name: property_key
+        description: A unique identifier for each property.
+
+  - name: dim_property_characteristics
+    description: This dataset includes characteristics of properties and rental listings.
+    columns:
+      - name: property_char_key
+        description: A unique key for property characteristics, combining date, locality, sale price, and property.
+      - name: number_of_rooms
+        description: The number of rooms in the property.
+      - name: number_of_bathrooms
+        description: The number of bathrooms in the property.
+      - name: carpet_area
+        description: The carpet area of the property.
+      - name: face
+        description: The facing direction of the property.
+      - name: region
+        description: The region of the rental property.
+      - name: region_url
+        description: URL for the region.
+      - name: price
+        description: The price of the rental property.
+      - name: housing_type
+        description: The type of housing.
+      - name: sqfeet
+        description: The square feet of the rental property.
+      - name: beds
+        description: The number of beds in the rental property.
+      - name: baths
+        description: The number of baths in the rental property.
+      - name: cats_allowed
+        description: Indicates if cats are allowed.
+      - name: dogs_allowed
+        description: Indicates if dogs are allowed.
+      - name: smoking_allowed
+        description: Indicates if smoking is allowed.
+      - name: wheelchair_access
+        description: Indicates if the property has wheelchair access.
+      - name: electric_vehicle_charge
+        description: Indicates if there is an electric vehicle charging facility.
+      - name: comes_furnished
+        description: Indicates if the property comes furnished.
+      - name: laundry_options
+        description: Laundry options available.
+      - name: parking_options
+        description: Parking options available.
+      - name: image_url
+        description: URL to an image of the property.
+      - name: description
+        description: Description of the property.
+      - name: state
+        description: The state where the property is located.
+
+  - name: dim_property_tax_rate
+    description: This dataset includes distinct property tax rates with unique identifiers.
+    columns:
+      - name: property_tax_rate
+        description: The property tax rate.
+      - name: property_tax_rate_key
+        description: A unique identifier for each property tax rate.
+
+  - name: dim_residential
+    description: This dataset includes distinct residential types with unique identifiers.
+    columns:
+      - name: residential
+        description: The residential type.
+      - name: residential_key
+        description: A unique identifier for each residential type.
+
+  - name: fact_property_transactions
+    description: This fact table includes details of property transactions.
+    columns:
+      - name: transaction_key
+        description: A unique key for each transaction, combining date, locality, sale price, and property.
+      - name: date
+        description: The date of the transaction.
+      - name: estimated_value
+        description: The estimated value of the property.
+      - name: sale_price
+        description: The sale price of the property.
+      - name: locality_key
+        description: A foreign key referencing the locality.
+      - name: property_key
+        description: A foreign key referencing the property.
+      - name: residential_key
+        description: A foreign key referencing the residential type.
+      - name: property_char_key
+        description: A foreign key referencing the property characteristics.
+      - name: property_tax_rate_key
+        description: A foreign key referencing the property tax rate.
+
+  - name: fact_rental_listings
+    description: This fact table includes details of rental listings.
+    columns:
+      - name: listing_id
+        description: The ID of the rental listing.
+      - name: locality_key
+        description: A foreign key referencing the locality.
+      - name: property_char_key
+        description: A foreign key referencing the property characteristics.

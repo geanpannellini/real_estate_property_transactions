@@ -1,0 +1,95 @@
+version: 2
+
+models:
+  - name: property_transactions_informations
+    description: Incremental table containing real estate property transaction details.
+    columns:
+      - name: date
+        description: The date when the property transaction occurred.
+      - name: year
+        description: The year of the property transaction.
+      - name: locality
+        description: The locality or area where the property is located.
+      - name: estimated_value
+        description: The estimated value of the property.
+      - name: sale_price
+        description: The actual sale price of the property.
+      - name: property
+        description: The type of property (e.g., Single Family).
+      - name: residential
+        description: Indicates whether the property is residential or not.
+      - name: number_of_rooms
+        description: The number of rooms in the property.
+      - name: number_of_bathrooms
+        description: The number of bathrooms in the property.
+      - name: carpet_area
+        description: The carpet area of the property.
+      - name: property_tax_rate
+        description: The property tax rate applicable to the property.
+      - name: face
+        description: The facing direction of the property (e.g., North, South, East).
+      - name: primary_id
+        description: Primary identifier combining date, locality, sale price, and property.
+
+    meta:
+      alias: property_transactions_informations
+      materialized: incremental
+      partition_by:
+        field: date
+        data_type: date
+      unique_key: primary_id
+      description: This table contains incremental updates of real estate property transaction details. It is partitioned by date and uniquely identified by primary_id.
+
+  - name: rental_transactions_informations
+    description: Table containing rental listings information.
+    columns:
+      - name: listing_id
+        description: Unique identifier for the rental listing.
+      - name: url
+        description: Listing URL on Craigslist.
+      - name: region
+        description: Craigslist region where the listing is located.
+      - name: region_url
+        description: URL of the Craigslist region.
+      - name: price
+        description: Rent per month for the housing listing.
+      - name: housing_type
+        description: Type of housing (e.g., apartment, house).
+      - name: sqfeet
+        description: Total square footage of the property.
+      - name: beds
+        description: Number of bedrooms in the property.
+      - name: baths
+        description: Number of bathrooms in the property.
+      - name: cats_allowed
+        description: Boolean indicating if cats are allowed (1 = yes, 0 = no).
+      - name: dogs_allowed
+        description: Boolean indicating if dogs are allowed (1 = yes, 0 = no).
+      - name: smoking_allowed
+        description: Boolean indicating if smoking is allowed (1 = yes, 0 = no).
+      - name: wheelchair_access
+        description: Boolean indicating if wheelchair access is available (1 = yes, 0 = no).
+      - name: electric_vehicle_charge
+        description: Boolean indicating if electric vehicle charging is available (1 = yes, 0 = no).
+      - name: comes_furnished
+        description: Boolean indicating if the property comes furnished (1 = yes, 0 = no).
+      - name: laundry_options
+        description: Options available for laundry facilities in the property.
+      - name: parking_options
+        description: Options available for parking facilities associated with the property.
+      - name: image_url
+        description: URL of the image associated with the listing.
+      - name: description
+        description: Detailed description of the property listing.
+      - name: lat
+        description: Latitude coordinate of the property location.
+      - name: long
+        description: Longitude coordinate of the property location.
+      - name: state
+        description: State where the property is located.
+
+    meta:
+      alias: rental_transactions_informations
+      materialized: incremental
+      unique_key: listing_id
+      description: This table contains rental listings information sourced from Craigslist. It is uniquely identified by the listing_id.
