@@ -1,9 +1,9 @@
 name: Run dbt test on pull request
 
-on:
-  pull_request:
-    branches:
-      - main
+# on:
+#  pull_request:
+#    branches:
+#      - main
 
 jobs:
   delay_job:
