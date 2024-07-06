@@ -1,10 +1,10 @@
-name: Run DBT workflow
-
-on:
-  schedule:
-    - cron: '0 9,12,15,18,21 * * 1-5'
-    - cron: '0 12,21 * * 6,0'
-  workflow_dispatch:
+# name: Run DBT workflow
+#
+# on:
+#  schedule:
+#    - cron: '0 9,12,15,18,21 * * 1-5'
+#    - cron: '0 12,21 * * 6,0'
+#  workflow_dispatch:
 
 jobs:
   deploy:
